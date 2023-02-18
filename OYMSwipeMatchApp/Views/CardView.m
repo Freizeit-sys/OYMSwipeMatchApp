@@ -14,31 +14,11 @@
 IB_DESIGNABLE
 @implementation CardView
 
-
 CGFloat threshold = 80;
 
 - (instancetype)init
 {
     self = [super init];
-    if (self) {
-        [self commonInit];
-    }
-    return self;
-}
-
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self commonInit];
-    }
-    return self;
-}
-
-// StoryBoard
-- (instancetype)initWithCoder:(NSCoder *)coder
-{
-    self = [super initWithCoder:coder];
     if (self) {
         [self commonInit];
     }

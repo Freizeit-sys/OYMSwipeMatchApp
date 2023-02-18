@@ -58,6 +58,11 @@
                                                     <constraint firstItem="KKm-7I-cgK" firstAttribute="top" secondItem="5lh-bz-agl" secondAttribute="top" id="otR-NQ-3q6"/>
                                                     <constraint firstAttribute="bottom" secondItem="KKm-7I-cgK" secondAttribute="bottom" id="ozL-uF-5NW"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

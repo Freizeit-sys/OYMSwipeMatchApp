@@ -7,11 +7,15 @@
 
 #import "HomeViewController.h"
 
+
+#import "User.h"
+
 #import "TopNavigationStackView.h"
 #import "CardView.h"
 #import "HomeBottomControlsStackView.h"
 
 @interface HomeViewController ()
+@property (nonatomic) NSArray *users;
 @property (weak, nonatomic) IBOutlet UIStackView *overallStackView;
 @property (weak, nonatomic) IBOutlet TopNavigationStackView *topNavigationStackView;
 @property (weak, nonatomic) IBOutlet UIView *cardsDeckView;
@@ -22,6 +26,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // setup users
+    self.users = @[
+        [[User alloc] initWithName:@"Kelly" age:23 profession:@"DJ" imageName:@"lady5c"],
+        [[User alloc] initWithName:@"Jane" age:18 profession:@"Teacher" imageName:@"lady4c"]
+    ];
+    
+    // setup views
     [self setupViews];
     [self setupDummyCards];
 }
@@ -44,11 +56,11 @@
 
 - (void)setupDummyCards
 {
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < self.users.count; i++) {
         CardView *cardView = [[CardView alloc] init];
         cardView.translatesAutoresizingMaskIntoConstraints = NO;
         [self.cardsDeckView addSubview:cardView];
-        
+
         [NSLayoutConstraint activateConstraints:@[
             [cardView.topAnchor constraintEqualToAnchor:self.cardsDeckView.topAnchor],
             [cardView.leadingAnchor constraintEqualToAnchor:self.cardsDeckView.leadingAnchor],

@@ -11,6 +11,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface User : NSObject
 
+- (instancetype)initWithName:(NSString*)name
+                         age:(NSInteger)age
+                  profession:(NSString*)profession
+                   imageName:(NSString*)imageName;
+
 @end
 
 NS_ASSUME_NONNULL_END
