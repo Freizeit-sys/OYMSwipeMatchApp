@@ -2,17 +2,16 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,19 +41,31 @@
                                         </constraints>
                                         <edgeInsets key="layoutMargins" top="0.0" left="16" bottom="0.0" right="16"/>
                                     </stackView>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G7G-x4-gaX" userLabel="Cards Deck View" customClass="CardView">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G7G-x4-gaX" userLabel="Cards Deck View">
                                         <rect key="frame" x="12" y="80" width="369" height="579"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lady5c" translatesAutoresizingMaskIntoConstraints="NO" id="KKm-7I-cgK">
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lh-bz-agl" customClass="CardView">
                                                 <rect key="frame" x="0.0" y="0.0" width="369" height="579"/>
-                                            </imageView>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lady5c" translatesAutoresizingMaskIntoConstraints="NO" id="KKm-7I-cgK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="369" height="579"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="KKm-7I-cgK" firstAttribute="leading" secondItem="5lh-bz-agl" secondAttribute="leading" id="TKp-0F-bZi"/>
+                                                    <constraint firstAttribute="trailing" secondItem="KKm-7I-cgK" secondAttribute="trailing" id="bZF-JM-dWU"/>
+                                                    <constraint firstItem="KKm-7I-cgK" firstAttribute="top" secondItem="5lh-bz-agl" secondAttribute="top" id="otR-NQ-3q6"/>
+                                                    <constraint firstAttribute="bottom" secondItem="KKm-7I-cgK" secondAttribute="bottom" id="ozL-uF-5NW"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="KKm-7I-cgK" secondAttribute="trailing" id="4dy-P4-4ht"/>
-                                            <constraint firstAttribute="bottom" secondItem="KKm-7I-cgK" secondAttribute="bottom" id="UwY-uB-i7A"/>
-                                            <constraint firstItem="KKm-7I-cgK" firstAttribute="top" secondItem="G7G-x4-gaX" secondAttribute="top" id="Yth-Gu-NXE"/>
-                                            <constraint firstItem="KKm-7I-cgK" firstAttribute="leading" secondItem="G7G-x4-gaX" secondAttribute="leading" id="lQb-gA-7g6"/>
+                                            <constraint firstItem="5lh-bz-agl" firstAttribute="leading" secondItem="G7G-x4-gaX" secondAttribute="leading" id="QCJ-vx-Vj7"/>
+                                            <constraint firstAttribute="bottom" secondItem="5lh-bz-agl" secondAttribute="bottom" id="UqQ-Ym-va7"/>
+                                            <constraint firstItem="5lh-bz-agl" firstAttribute="top" secondItem="G7G-x4-gaX" secondAttribute="top" id="dh8-hJ-huR"/>
+                                            <constraint firstAttribute="trailing" secondItem="5lh-bz-agl" secondAttribute="trailing" id="zRl-98-Bd9"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -110,7 +121,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomControlsStackView" destination="EUB-hm-vdz" id="u5d-ce-6A9"/>
-                        <outlet property="cardsDeckView" destination="G7G-x4-gaX" id="WkR-jZ-0RD"/>
+                        <outlet property="cardsDeckView" destination="G7G-x4-gaX" id="9Kq-yV-J3f"/>
                         <outlet property="overallStackView" destination="7TV-Pe-vMA" id="ttD-GH-RsZ"/>
                         <outlet property="topNavigationStackView" destination="gff-X7-M7b" id="939-3T-rfL"/>
                     </connections>

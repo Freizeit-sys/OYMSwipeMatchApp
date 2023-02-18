@@ -7,8 +7,13 @@
 
 #import "CardView.h"
 
+@interface CardView ()
+@property (nonatomic) UIImageView *imageView;
+@end
+
 IB_DESIGNABLE
 @implementation CardView
+
 
 CGFloat threshold = 80;
 
@@ -45,6 +50,22 @@ CGFloat threshold = 80;
     self.layer.cornerRadius = 10;
     self.clipsToBounds = YES;
     
+    // setup image view
+    UIImage *image = [UIImage imageNamed:@"lady5c"];;
+    self.imageView = [[UIImageView alloc] initWithImage:image];
+    self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.imageView.contentMode = UIViewContentModeScaleAspectFill;
+    
+    [self addSubview:self.imageView];
+    
+    [NSLayoutConstraint activateConstraints:@[
+        [self.imageView.topAnchor constraintEqualToAnchor:self.topAnchor],
+        [self.imageView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor],
+        [self.imageView.trailingAnchor constraintEqualToAnchor:self.trailingAnchor],
+        [self.imageView.bottomAnchor constraintEqualToAnchor:self.bottomAnchor]
+    ]];
+    
+    // setup pan gesture
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [self addGestureRecognizer:panGesture];
 }
@@ -82,7 +103,7 @@ CGFloat threshold = 80;
 - (void)handleEnded:(UIPanGestureRecognizer*)gesture
 {
     CGFloat translationDirection = [gesture translationInView:nil].x > 0 ? 1 : -1;
-    BOOL shouldDismissCard = [gesture translationInView:nil].x > threshold;
+    BOOL shouldDismissCard = fabs([gesture translationInView:nil].x) > threshold;
     
     [UIView animateWithDuration:0.75 delay:0 usingSpringWithDamping:0.6 initialSpringVelocity:0.1 options:UIViewAnimationOptionCurveEaseOut animations:^{
         if (shouldDismissCard) {
@@ -92,6 +113,7 @@ CGFloat threshold = 80;
         }
     } completion:^(BOOL finished){
         self.transform = CGAffineTransformIdentity;
+        [self removeFromSuperview];
     }];
 }
 
