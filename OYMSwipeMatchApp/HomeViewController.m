@@ -22,7 +22,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupViews];
     [self setupDummyCards];
+}
+
+- (void)setupViews
+{
+    // setup topNavigationStackView
+    self.topNavigationStackView.axis = UILayoutConstraintAxisHorizontal;
+    
+    // setup overallStackView
+    self.overallStackView.axis = UILayoutConstraintAxisVertical;
+    self.overallStackView.layoutMargins = UIEdgeInsetsMake(0, 12, 0, 12);
+    [self.overallStackView setLayoutMarginsRelativeArrangement:YES];
+    
+    // setup bottomControlsStackView
+    self.bottomControlsStackView.axis = UILayoutConstraintAxisHorizontal;
 }
 
 // MARK: - Dummy

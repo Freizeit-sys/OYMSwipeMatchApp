@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		848BF3FE29A128A5007FD479 /* UIView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 848BF3FD29A128A5007FD479 /* UIView+Extensions.m */; };
+		848BF40329A1308D007FD479 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 848BF40229A1308D007FD479 /* User.m */; };
 		84C5B23F299D06F9006C29F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C5B23E299D06F9006C29F7 /* AppDelegate.m */; };
 		84C5B242299D06F9006C29F7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C5B241299D06F9006C29F7 /* SceneDelegate.m */; };
 		84C5B245299D06F9006C29F7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C5B244299D06F9006C29F7 /* HomeViewController.m */; };
@@ -23,6 +24,8 @@
 /* Begin PBXFileReference section */
 		848BF3FC29A128A5007FD479 /* UIView+Extensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Extensions.h"; sourceTree = "<group>"; };
 		848BF3FD29A128A5007FD479 /* UIView+Extensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extensions.m"; sourceTree = "<group>"; };
+		848BF40129A1308D007FD479 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		848BF40229A1308D007FD479 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		84C5B23A299D06F9006C29F7 /* OYMSwipeMatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OYMSwipeMatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C5B23D299D06F9006C29F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84C5B23E299D06F9006C29F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,6 +66,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		848BF40029A13066007FD479 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				848BF40129A1308D007FD479 /* User.h */,
+				848BF40229A1308D007FD479 /* User.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		84C5B231299D06F8006C29F7 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				848BF3FB29A127F5007FD479 /* Extensions */,
+				848BF40029A13066007FD479 /* Model */,
 				84C5B256299D0E35006C29F7 /* Views */,
 				84C5B23D299D06F9006C29F7 /* AppDelegate.h */,
 				84C5B23E299D06F9006C29F7 /* AppDelegate.m */,
@@ -184,6 +197,7 @@
 			files = (
 				84C5B245299D06F9006C29F7 /* HomeViewController.m in Sources */,
 				84C5B23F299D06F9006C29F7 /* AppDelegate.m in Sources */,
+				848BF40329A1308D007FD479 /* User.m in Sources */,
 				848BF3FE29A128A5007FD479 /* UIView+Extensions.m in Sources */,
 				84C5B259299D0F1E006C29F7 /* HomeBottomControlsStackView.m in Sources */,
 				84C5B250299D06FA006C29F7 /* main.m in Sources */,
