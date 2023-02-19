@@ -43,40 +43,6 @@
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G7G-x4-gaX" userLabel="Cards Deck View">
                                         <rect key="frame" x="12" y="80" width="369" height="579"/>
-                                        <subviews>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lh-bz-agl" customClass="CardView">
-                                                <rect key="frame" x="0.0" y="0.0" width="369" height="579"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lady5c" translatesAutoresizingMaskIntoConstraints="NO" id="KKm-7I-cgK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="369" height="579"/>
-                                                    </imageView>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstItem="KKm-7I-cgK" firstAttribute="leading" secondItem="5lh-bz-agl" secondAttribute="leading" id="TKp-0F-bZi"/>
-                                                    <constraint firstAttribute="trailing" secondItem="KKm-7I-cgK" secondAttribute="trailing" id="bZF-JM-dWU"/>
-                                                    <constraint firstItem="KKm-7I-cgK" firstAttribute="top" secondItem="5lh-bz-agl" secondAttribute="top" id="otR-NQ-3q6"/>
-                                                    <constraint firstAttribute="bottom" secondItem="KKm-7I-cgK" secondAttribute="bottom" id="ozL-uF-5NW"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="5lh-bz-agl" firstAttribute="leading" secondItem="G7G-x4-gaX" secondAttribute="leading" id="QCJ-vx-Vj7"/>
-                                            <constraint firstAttribute="bottom" secondItem="5lh-bz-agl" secondAttribute="bottom" id="UqQ-Ym-va7"/>
-                                            <constraint firstItem="5lh-bz-agl" firstAttribute="top" secondItem="G7G-x4-gaX" secondAttribute="top" id="dh8-hJ-huR"/>
-                                            <constraint firstAttribute="trailing" secondItem="5lh-bz-agl" secondAttribute="trailing" id="zRl-98-Bd9"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EUB-hm-vdz" userLabel="Bottom Controls Stack View" customClass="HomeBottomControlsStackView">
                                         <rect key="frame" x="12" y="659" width="369" height="100"/>
@@ -140,7 +106,6 @@
         <image name="app_icon" width="42.666667938232422" height="42.666667938232422"/>
         <image name="boost_circle" width="64" height="64"/>
         <image name="dismiss_circle" width="80" height="80"/>
-        <image name="lady5c" width="500" height="749"/>
         <image name="like_circle" width="80" height="80"/>
         <image name="refresh_circle" width="64" height="64"/>
         <image name="super_like_circle" width="64" height="64"/>

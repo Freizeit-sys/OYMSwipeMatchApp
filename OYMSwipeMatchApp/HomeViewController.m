@@ -7,7 +7,6 @@
 
 #import "HomeViewController.h"
 
-
 #import "User.h"
 
 #import "TopNavigationStackView.h"
@@ -57,7 +56,7 @@
 - (void)setupDummyCards
 {
     for (int i = 0; i < self.users.count; i++) {
-        CardView *cardView = [[CardView alloc] init];
+        CardView *cardView = CardView.new;
         cardView.translatesAutoresizingMaskIntoConstraints = NO;
         [self.cardsDeckView addSubview:cardView];
 

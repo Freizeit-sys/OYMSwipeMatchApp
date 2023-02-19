@@ -7,11 +7,11 @@
 
 #import "CardView.h"
 
+IB_DESIGNABLE
 @interface CardView ()
-@property (nonatomic) UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @end
 
-IB_DESIGNABLE
 @implementation CardView
 
 CGFloat threshold = 80;
@@ -27,24 +27,17 @@ CGFloat threshold = 80;
 
 - (void)commonInit
 {
+    // setup view
+    UINib *nib = [UINib nibWithNibName:@"CardView" bundle:[NSBundle bundleForClass:self.class]];
+    UIView *view = [[nib instantiateWithOwner:self options:nil] firstObject];
+    [self addSubview:view];
+    
     self.layer.cornerRadius = 10;
     self.clipsToBounds = YES;
     
     // setup image view
-    UIImage *image = [UIImage imageNamed:@"lady5c"];;
-    self.imageView = [[UIImageView alloc] initWithImage:image];
-    self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
     self.imageView.contentMode = UIViewContentModeScaleAspectFill;
-    
-    [self addSubview:self.imageView];
-    
-    [NSLayoutConstraint activateConstraints:@[
-        [self.imageView.topAnchor constraintEqualToAnchor:self.topAnchor],
-        [self.imageView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor],
-        [self.imageView.trailingAnchor constraintEqualToAnchor:self.trailingAnchor],
-        [self.imageView.bottomAnchor constraintEqualToAnchor:self.bottomAnchor]
-    ]];
-    
+        
     // setup pan gesture
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [self addGestureRecognizer:panGesture];

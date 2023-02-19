@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		848BF3FE29A128A5007FD479 /* UIView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 848BF3FD29A128A5007FD479 /* UIView+Extensions.m */; };
 		848BF40329A1308D007FD479 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 848BF40229A1308D007FD479 /* User.m */; };
+		848BF40529A137BD007FD479 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848BF40429A137BD007FD479 /* CardView.xib */; };
 		84C5B23F299D06F9006C29F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C5B23E299D06F9006C29F7 /* AppDelegate.m */; };
 		84C5B242299D06F9006C29F7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C5B241299D06F9006C29F7 /* SceneDelegate.m */; };
 		84C5B245299D06F9006C29F7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C5B244299D06F9006C29F7 /* HomeViewController.m */; };
@@ -26,6 +27,7 @@
 		848BF3FD29A128A5007FD479 /* UIView+Extensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extensions.m"; sourceTree = "<group>"; };
 		848BF40129A1308D007FD479 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		848BF40229A1308D007FD479 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		848BF40429A137BD007FD479 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		84C5B23A299D06F9006C29F7 /* OYMSwipeMatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OYMSwipeMatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C5B23D299D06F9006C29F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84C5B23E299D06F9006C29F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				84C5B24B299D06FA006C29F7 /* LaunchScreen.storyboard */,
 				84C5B24E299D06FA006C29F7 /* Info.plist */,
 				84C5B24F299D06FA006C29F7 /* main.m */,
+				848BF40429A137BD007FD479 /* CardView.xib */,
 			);
 			path = OYMSwipeMatchApp;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			files = (
 				84C5B24D299D06FA006C29F7 /* LaunchScreen.storyboard in Resources */,
 				84C5B24A299D06FA006C29F7 /* Assets.xcassets in Resources */,
+				848BF40529A137BD007FD479 /* CardView.xib in Resources */,
 				84C5B248299D06F9006C29F7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
