@@ -28,7 +28,7 @@
     
     // setup users
     self.users = @[
-        [[User alloc] initWithName:@"Kelly" age:23 profession:@"DJ" imageName:@"lady5c"],
+        [[User alloc] initWithName:@"Kelly" age:23 profession:@"Music DJ" imageName:@"lady5c"],
         [[User alloc] initWithName:@"Jane" age:18 profession:@"Teacher" imageName:@"lady4c"]
     ];
     
@@ -55,8 +55,8 @@
 
 - (void)setupDummyCards
 {
-    for (int i = 0; i < self.users.count; i++) {
-        CardView *cardView = CardView.new;
+    for (User *user in self.users) {
+        CardView *cardView = [[CardView alloc] initWithUser:user];
         cardView.translatesAutoresizingMaskIntoConstraints = NO;
         [self.cardsDeckView addSubview:cardView];
 
@@ -67,6 +67,7 @@
             [cardView.bottomAnchor constraintEqualToAnchor:self.cardsDeckView.bottomAnchor]
         ]];
     }
+    
     // cardsDeckViewを最前面に設定
     [self.overallStackView bringSubviewToFront:self.cardsDeckView];
 }
