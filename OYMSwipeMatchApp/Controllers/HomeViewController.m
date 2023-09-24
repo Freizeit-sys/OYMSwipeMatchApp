@@ -28,8 +28,8 @@
     
     // setup users
     self.users = @[
-        [[User alloc] initWithName:@"Kelly" age:23 profession:@"Music DJ" imageName:@"lady5c"],
-        [[User alloc] initWithName:@"Jane" age:18 profession:@"Teacher" imageName:@"lady4c"]
+        [[User alloc] initWithName:@"Jane" age:18 profession:@"Teacher" imageName:@"lady4c"],
+        [[User alloc] initWithName:@"Kelly" age:23 profession:@"Music DJ" imageName:@"lady5c"]
     ];
     
     // setup views

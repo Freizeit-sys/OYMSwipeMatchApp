@@ -20,6 +20,7 @@
 		84C5B259299D0F1E006C29F7 /* HomeBottomControlsStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C5B258299D0F1E006C29F7 /* HomeBottomControlsStackView.m */; };
 		84C5B25C299D1511006C29F7 /* TopNavigationStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C5B25B299D1511006C29F7 /* TopNavigationStackView.m */; };
 		84C5B25F299EED4F006C29F7 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C5B25E299EED4F006C29F7 /* CardView.m */; };
+		84EAA46429A1F71E00A5644E /* CardViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EAA46329A1F71E00A5644E /* CardViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		84C5B25B299D1511006C29F7 /* TopNavigationStackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopNavigationStackView.m; sourceTree = "<group>"; };
 		84C5B25D299EED4F006C29F7 /* CardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
 		84C5B25E299EED4F006C29F7 /* CardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		84EAA46229A1F71E00A5644E /* CardViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardViewModel.h; sourceTree = "<group>"; };
+		84EAA46329A1F71E00A5644E /* CardViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,15 +99,15 @@
 		84C5B23C299D06F9006C29F7 /* OYMSwipeMatchApp */ = {
 			isa = PBXGroup;
 			children = (
-				848BF3FB29A127F5007FD479 /* Extensions */,
+				84EAA46129A1F6FA00A5644E /* ViewModels */,
 				848BF40029A13066007FD479 /* Model */,
 				84C5B256299D0E35006C29F7 /* Views */,
+				84EAA46029A1F56400A5644E /* Controllers */,
+				848BF3FB29A127F5007FD479 /* Extensions */,
 				84C5B23D299D06F9006C29F7 /* AppDelegate.h */,
 				84C5B23E299D06F9006C29F7 /* AppDelegate.m */,
 				84C5B240299D06F9006C29F7 /* SceneDelegate.h */,
 				84C5B241299D06F9006C29F7 /* SceneDelegate.m */,
-				84C5B243299D06F9006C29F7 /* HomeViewController.h */,
-				84C5B244299D06F9006C29F7 /* HomeViewController.m */,
 				84C5B246299D06F9006C29F7 /* Main.storyboard */,
 				84C5B249299D06FA006C29F7 /* Assets.xcassets */,
 				84C5B24B299D06FA006C29F7 /* LaunchScreen.storyboard */,
@@ -126,6 +129,24 @@
 				84C5B25E299EED4F006C29F7 /* CardView.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		84EAA46029A1F56400A5644E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84C5B243299D06F9006C29F7 /* HomeViewController.h */,
+				84C5B244299D06F9006C29F7 /* HomeViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		84EAA46129A1F6FA00A5644E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				84EAA46229A1F71E00A5644E /* CardViewModel.h */,
+				84EAA46329A1F71E00A5644E /* CardViewModel.m */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +228,7 @@
 				84C5B250299D06FA006C29F7 /* main.m in Sources */,
 				84C5B242299D06F9006C29F7 /* SceneDelegate.m in Sources */,
 				84C5B25C299D1511006C29F7 /* TopNavigationStackView.m in Sources */,
+				84EAA46429A1F71E00A5644E /* CardViewModel.m in Sources */,
 				84C5B25F299EED4F006C29F7 /* CardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
